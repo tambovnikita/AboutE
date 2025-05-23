@@ -1,15 +1,7 @@
-<div style="display: flex; column-gap: 20px; margin-top: 20px;">
-    <div>
-        <a href="https://aboute.online/">
-            <img src="./frontend/src/logo.svg" width="70">
-        </a>
-    </div>
-    <div>
-        <h1 style="margin: 0; padding: 0;">AboutE</h1>
-        <a href="https://aboute.online/">https://aboute.online/</a>
-    </div>
-</div>
+<h1>AboutE</h1>
+https://aboute.online/  
 
+<br><br>
 A multifunctional service focused on working with information **about everyone**.  
 <small>Многофункциональный сервис, ориентированный на работу с информацией обо всех.</small>
 
