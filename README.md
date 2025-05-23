@@ -1,15 +1,7 @@
-<div style="display: flex; column-gap: 20px; margin-top: 20px;">
-    <div>
-        <a href="https://aboute.online/">
-            <img src="./frontend/src/logo.svg" width="70">
-        </a>
-    </div>
-    <div>
-        <h1 style="margin: 0; padding: 0;">AboutE</h1>
-        <a href="https://aboute.online/">https://aboute.online/</a>
-    </div>
-</div>
+<h1>AboutE</h1>
+https://aboute.online/  
 
+<br><br>
 A multifunctional service focused on working with information **about everyone**.  
 <small>Многофункциональный сервис, ориентированный на работу с информацией обо всех.</small>
 
@@ -38,10 +30,8 @@ A multifunctional service focused on working with information **about everyone**
 ![Person Info 2](./imgs/person_info_2.png)
 <small>Информацию можно редактировать, добавлять новую и сохранять</small>
 
-<div style="display: flex; column-gap: 20px; margin-top: 20px;">
-    <div><img src="./imgs/person_info_3.png" width="100%" alt="Person Info 3"></div>
-    <div><img src="./imgs/person_info_4.png" width="100%" alt="Person Info 4"></div>
-</div>
+![Person Info 3](./imgs/person_info_3.png)
+![Person Info 4](./imgs/person_info_4.png)
 <small>При необходимости можно добавить фото/видео, связанные с человеком</small>
 
 ![Person Info 5](./imgs/person_info_5.png)

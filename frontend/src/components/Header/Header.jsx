@@ -40,7 +40,7 @@ export const Header = () => {
               <div className="header_menu">
                 <a className="profile_btn" onClick={() => user && navigate('/profile')}>Профиль</a>
                 <a className="support_btn" onClick={() => navigate('/support')}>Служба поддержки</a>
-                <a className="github_btn" href='https://github.com/' target='_blank'>GitHub</a>
+                <a className="github_btn" href='https://github.com/tambovnikita/AboutE' target='_blank'>GitHub</a>
                 <a className="exit_btn" onClick={() => {logout(); navigate('/login')}}>Выход</a>
               </div>
             )}
