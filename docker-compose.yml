@@ -1,0 +1,85 @@
+services:
+  postgres:
+    image: postgres:latest
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d aboute"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    env_file:
+      - ./.env
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - app-network
+  
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongo-data:/data/db
+    env_file:
+      - ./.env
+    ports:
+      - "27018:27017"
+    networks:
+      - app-network
+
+  backend:
+    build: ./backend
+    volumes:
+      - ./backend/static:/app/static
+    depends_on:
+      postgres:
+        condition: service_healthy
+      mongo:
+        condition: service_started
+    env_file:
+      - ./.env  
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    env_file:
+      - ./frontend/.env
+    networks:
+      - app-network
+
+  # frontend:
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: Dockerfile.dev
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./frontend:/app
+  #     - /app/node_modules
+  #   environment:
+  #     - REACT_APP_API_URL=http://backend:8000
+  #     - CHOKIDAR_USEPOLLING=true
+  #   depends_on:
+  #     - backend
+  
+  telegram:
+    build: ./telegram
+    depends_on:
+      mongo:
+        condition: service_started
+    env_file:
+      - ./.env
+    networks:
+      - app-network
+
+volumes:
+  postgres-data:
+  mongo-data:
+
+networks:
+  app-network:
+    external: true

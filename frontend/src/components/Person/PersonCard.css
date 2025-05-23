@@ -1,0 +1,42 @@
+.person_card {
+    display: flex;
+    grid-gap: 20px;
+    border-radius: 8px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.person_card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-left: 15px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+.card_info {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+    padding: 10px 20px;
+    padding-left: 2px;
+}
+.card_info .card_title {
+    font: 20px Inter;
+    color: rgba(0, 0, 0, 0.8);
+}
+.card_info .card_subtitle {
+    font: 14px Inter;
+    color: rgba(0, 0, 0, 0.5);
+}
+.card_info .tags {
+    display: flex;
+    grid-gap: 6px;
+    margin-top: 15px;
+}
+.card_info .tags .tag {
+    font: 14px Inter;
+    padding: 4px 10px;
+    border-radius: 8px;
+}

@@ -1,0 +1,47 @@
+.home .blocks {
+    display: flex;
+    margin: 100px auto;
+    grid-gap: 120px;
+    width: 75%;
+}
+.home .blocks .left_block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 20px;
+}
+.home .blocks .left_block img {
+    width: 220px;
+}
+.home .blocks .left_block p {
+    font: 70px Inter;
+    font-weight: 200;
+}
+.home .blocks .right_block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+}
+.home .blocks .right_block p {
+    font: 24px Inter;
+    font-weight: 200;
+}
+.home .blocks .right_block .rus {
+    font: 16px Inter;
+    font-weight: 100;
+    margin-top: 20px;
+}
+.home .blocks .right_block a {
+    width: min-content;
+    text-wrap: nowrap;
+    font: 20px Inter;
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px 30px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}

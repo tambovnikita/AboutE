@@ -1,0 +1,232 @@
+.person_info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.person_info.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    background: rgb(233, 233, 233);
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    position: relative;
+}
+.person_info.visible .content {
+    transform: scale(1);
+}
+.save_edit_btn {
+    display: flex;
+    column-gap: 8px;
+    padding: 0 10px;
+    position: absolute;
+    top: -12px;
+    right: 34px;
+    height: 24px;
+    border: 2px solid rgb(90, 90, 90);
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+.save_edit_btn img {
+    width: 15px;
+}
+.save_edit_btn p {
+    font: 10px Inter;
+    color: rgb(54, 58, 66);
+    margin: auto 0;
+}
+.close_btn {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 24px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: rgb(90, 90, 90);
+    cursor: pointer;
+}
+.blocks {
+    display: flex;
+}
+.content .blocks .left_block {
+    display: flex;
+    column-gap: 20px;
+    margin: 15px;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+.avatar_and_social {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.add_social_btn {
+    display: flex;
+    height: min-content;
+    align-items: center;
+    column-gap: 8px;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 6px 10px;
+    user-select: none;
+    cursor: pointer;
+}
+.add_social_btn img {
+    width: 15px;
+}
+.add_social_btn p {
+    font: 10px Inter;
+    color: rgb(140, 140, 140);
+}
+.social_items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left_block .avatar_and_social .visible_btn {
+    width: 20px;
+    margin-top: auto;
+}
+.left_block .btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left_block .btns .tabs_btns {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.left_block .btns .tabs_btns img {
+    width: 20px;
+}
+.left_block .btns .full_social_btn {
+    width: 20px;
+}
+.content .blocks .right_block {
+    background-color: white;
+    width: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 20px 0;
+}
+.characteristics {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: end;
+    width: min-content;
+}
+.characteristic {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    column-gap: 20px;
+}
+.characteristic_name_and_delete {
+    display: flex;
+    justify-content: end;
+    width: 40%;
+    column-gap: 10px;
+    padding: 6px;
+    padding-left: 15px;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+.characteristic_name_and_delete p {
+    font: 14px Inter;
+    font-weight: 300;
+    color: rgb(54, 58, 66);
+    margin: auto 0;
+    text-wrap: nowrap;
+}
+.characteristic_name_and_delete img {
+    width: 15px;
+    padding: 6px;
+    background-color: rgb(255, 200, 200);
+    border-radius: 6px;
+}
+.characteristic_value {
+    display: flex;
+    width: 300px;
+}
+.characteristic_value input[type="text"], .characteristic_value input[type="date"] {
+    background-color: inherit;
+    border: 0;
+    border-bottom: 1px solid rgb(90, 90, 90);
+    font: 14px Inter;
+    color: rgb(54, 58, 66);
+    padding: 0;
+}
+.characteristic_value input[type="text"] {
+    width: 100%;
+}
+.characteristic input:focus {
+    outline: 0;
+}
+.characteristic_value select {
+    border: 0;
+    font: 14px Inter;
+    color: rgb(54, 58, 66);
+    border-bottom: 1px solid rgb(90, 90, 90);
+    padding: 0;
+    padding-right: 10px;
+}
+.characteristic_value select:focus {
+    outline: 0;
+}
+.characteristic_value.view input[type="text"], .characteristic_value.view input[type="date"], .characteristic_value.view select {
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+.characteristic_value.view select {
+    pointer-events: none;
+}
+.add_characteristic {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    column-gap: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 10px;
+    align-items: center;
+    padding: 10px 15px;
+    user-select: none;
+    cursor: pointer;
+}
+.add_characteristic img {
+    width: 15px;
+}
+.add_characteristic p {
+    font: 12px Inter;
+    color: rgb(140, 140, 140);
+}
+.error_message {
+    padding: 20px;
+    color: #dc3545;
+    text-align: center;
+}
+.error_message button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

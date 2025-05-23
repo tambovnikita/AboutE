@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+motor
+pydantic[email]
+python-multipart
+werkzeug
+sqlalchemy[asyncio]
+asyncpg
+bcrypt
+python-jose[cryptography]

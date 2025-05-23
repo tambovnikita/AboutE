@@ -1,0 +1,87 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.error-container {
+    text-align: center;
+    padding: 2rem;
+    color: #dc3545;
+}
+.error-container button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.search_block {
+    display: flex;
+    grid-gap: 20px;
+}
+.search_block p {
+    text-wrap: nowrap;
+    margin: auto 0;
+    font: 16px Inter;
+    color: rgba(0, 0, 0, 0.8);
+}
+.search_block button {
+    font: 16px Inter;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 40px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+.cards {
+    display: flex;
+    margin-top: 70px;
+    padding-bottom: 140px;
+    column-gap: 30px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+}
+.add_person_btn {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+    row-gap: 15px;
+    border-radius: 8px;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    user-select: none;
+}
+.add_person_title {
+    display: flex;
+    column-gap: 10px;
+}
+.add_person_title img {
+    width: 25px;
+}
+.add_person_title p {
+    font: 20px Inter;
+    color: rgba(0, 0, 0, 0.8);
+}
+.add_person_subtitle {
+    font: 12px Inter;
+    color: rgb(140, 140, 140);
+}
