@@ -45,5 +45,7 @@ A multifunctional service focused on working with information **about everyone**
 - **MongoDB** - *хранение характеристик и настроек всех persons*
 - **TelegramAPI (aiogram)** - *бот-помощник, предоставляющий дополнительный функционал*
 - **Nginx** - *гибкая конфигурация, работа с сертификатами, обработка статики*
+- **Docker** - *frontend, backend, базы данных и Telegram-сервис заключены в отдельные Docker-контейнеры*
+- **docker-compose** - *управление созданными Docker-контейнерами*
 
 ![Технологии](./imgs/technologies.png)
